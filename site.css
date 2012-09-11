@@ -1,0 +1,49 @@
+
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'CreteRoundRegular';
+    src: url('fonts/CreteRound-Regular-webfont.eot');
+    src: url('fonts/CreteRound-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CreteRound-Regular-webfont.woff') format('woff'),
+         url('fonts/CreteRound-Regular-webfont.ttf') format('truetype'),
+         url('fonts/CreteRound-Regular-webfont.svg#CreteRoundRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body {
+	padding-top: 10px;
+	padding-bottom: 40px;
+}
+
+.title-unit {
+	text-align: center;
+}
+
+#site-title {
+	font: 60px/48px 'BebasNeueRegular', Arial, sans-serif;
+	letter-spacing: 0;
+	margin-bottom: 0;
+	color: #FF2B06;
+}
+
+#site-subtitle {
+	font: 14px/14px 'CreteRoundRegular', serif;
+	color: gray;
+	margin-top: 0;
+}
