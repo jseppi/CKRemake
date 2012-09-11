@@ -27,8 +27,88 @@
 
 
 body {
-	padding-top: 10px;
+	padding-top: 20px;
 	padding-bottom: 40px;
+    background: url('img/brillant.png') repeat;
+}
+
+.wrapper {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 1em; 
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1) ;
+       -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1) ;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1) ;
+}
+
+.nav {
+    text-align:center;
+    font: 18px/18px 'CreteRoundRegular', serif;
+}
+
+.nav a, .nav a:visited, .nav a:hover{
+    color:black;
+    text-decoration: none;
+    margin-right: 12px;
+    margin-left: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.nav a:hover {
+    background-color: #F7F7F7;
+    color: #008047;
+}
+
+ 
+.wrapper:before,
+.wrapper:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
+.curved::before {
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    -moz-border-radius: 100px / 10px;
+         border-radius: 100px / 10px;
+    
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+       -moz-box-shadow: 0 0 15px rgba(0,0,0, 1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+ 
+.lifted:before,
+.lifted:after { 
+    top:15px;
+    left:10px;
+    width:50%;
+    height:20%;
+    max-width:300px;
+    -webkit-box-shadow:0 -15px 10px rgba(0, 0, 0, 0.7);   
+       -moz-box-shadow:0 -15px 10px rgba(0, 0, 0, 0.7);
+            box-shadow:0 -15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform:rotate(3deg);    
+       -moz-transform:rotate(3deg);   
+        -ms-transform:rotate(3deg);   
+         -o-transform:rotate(3deg);
+            transform:rotate(3deg);
+}
+ 
+.lifted:after {
+    right:10px; 
+    left:auto;
+    -webkit-transform:rotate(-3deg);   
+       -moz-transform:rotate(-3deg);  
+        -ms-transform:rotate(-3deg);  
+         -o-transform:rotate(-3deg);
+            transform:rotate(-3deg);
 }
 
 .title-unit {
@@ -43,7 +123,7 @@ body {
 }
 
 #site-subtitle {
-	font: 14px/14px 'CreteRoundRegular', serif;
+	font: 16px/14px 'CreteRoundRegular', serif;
 	color: gray;
 	margin-top: 0;
 }
