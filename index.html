@@ -18,9 +18,10 @@
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script>
-		!function($){
+		$(function() {
 			$('#featuredCarousel').carousel();
-		}(window.jQuery);
+
+		});
 	</script>
 </head>
 <body>
@@ -42,7 +43,7 @@
 		<div class="wrapper curved">
 			<div class="row">
 				<div class="span5">
-					<div id="featuredCarousel" class="carousel slide">
+					<div id="featuredCarousel" class="carousel slide" data-interval="500">
 					<!-- Carousel items -->
 						<div class="carousel-inner">
 							<div class="active item">
@@ -68,8 +69,8 @@
 							</div>
 						</div>
 						<!-- Carousel nav -->
-						<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-						<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+						<a class="carousel-control left" href="#featuredCarousel" data-slide="prev">&lsaquo;</a>
+						<a class="carousel-control right" href="#featuredCarousel" data-slide="next">&rsaquo;</a>
 					</div>
 				</div>
 				<div class="span4">
