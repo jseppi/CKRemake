@@ -54,7 +54,8 @@ body {
 
 #main-nav ul.nav {
     padding: 0;
-    margin-bottom: 0;
+    margin: auto;
+    display: inline-block;
 }
 
 #main-nav a, #main-nav a:visited, #main-nav a:hover{
@@ -66,9 +67,6 @@ body {
     padding-right: 8px;
 }
 
-#main-nav .nav > li > a {
-    
-}
 
 #main-nav .nav-pills > .active > a,
 #main-nav .nav-pills > .active > a:hover {
