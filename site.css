@@ -48,8 +48,13 @@ body {
     text-align:center;
     font: 18px/18px 'CreteRoundRegular', serif;
     background-color: rgba(255, 210, 31, 0.2);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#main-nav ul.nav {
+    padding: 0;
+    margin-bottom: 0;
 }
 
 #main-nav a, #main-nav a:visited, #main-nav a:hover{
@@ -61,11 +66,26 @@ body {
     padding-right: 8px;
 }
 
-#main-nav a:hover {
+#main-nav .nav > li > a {
     
-    color: #008047;
 }
 
+#main-nav .nav-pills > .active > a,
+#main-nav .nav-pills > .active > a:hover {
+    color: #008047;
+    background-color: transparent;
+}
+
+#main-nav .nav > li > a:hover {
+  color: #008047;
+  background-color: transparent;
+}
+
+#main-nav .nav-pills > .active > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0
+}
  
 .wrapper:before,
 .wrapper:after {
