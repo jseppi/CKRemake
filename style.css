@@ -1,4 +1,14 @@
-
+/*
+Theme Name: CK Remake
+Theme URI: http://coseppikitchen.com
+Description: Theme for CoseppiKitchen.com
+Author: James Seppi
+Author URI: http://coseppi.com/
+Version: 1.0
+Tags: 
+License:
+License URI:
+*/
 
 @font-face {
     font-family: 'BebasNeueRegular';
@@ -24,8 +34,6 @@
 
 }
 
-
-
 body {
 	padding-top: 20px;
 	padding-bottom: 40px;
@@ -39,9 +47,9 @@ body {
     position: relative;
     padding: 1em; 
     background: #fff;
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1) ;
-       -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1) ;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1) ;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #main-nav {
