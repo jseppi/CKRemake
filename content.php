@@ -13,6 +13,8 @@
                     <span class="by-author">
                         <span class="sep"> by </span> <?php the_author_posts_link(); ?> | <span class="meta"><?php edit_post_link(__('Edit')); ?></span>	
                     </span>
+                    <?php the_tags('<b>Tags:</b> ', ', ', ''); ?>
+                    Category: <?php the_category(', ') ?>
                 </div><!-- .entry-meta -->
             <?php endif; ?>
             

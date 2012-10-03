@@ -43,15 +43,26 @@ get_header(); ?>
                 <a class="carousel-control right" href="#featuredCarousel" data-slide="next">&rsaquo;</a>
             </div>
         </div>
+        
+        <?php query_posts( array ( 'category_name' => 'front-page-blurb', 'posts_per_page' => 1 ) ); ?>
         <div class="span4">
-            <?php //TODO: Fill this with a special post type ?> 
-            <h3>Heading</h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn" href="#">View details »</a></p>
+            <div class="entry-body">
+                <article class="sticky">
+                    <?php while ( have_posts() ) : the_post(); ?>    
+                        <?php the_content(); ?>
+                    <?php endwhile; ?>
+                </article>
+            </div>
         </div>
     </div> <!-- /top row -->
    
-    <?php query_posts(  array ( 'category_name' => 'news') ); ?>
+    <div class="row">
+        <div class="span9">
+           <h2 class="news-heading">Latest News</h2>
+        </div>
+    </div>
+
+    <?php query_posts(  array ( 'category_name' => 'news', 'posts_per_page' => 3) ); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php get_template_part('content'); ?>
     <?php endwhile; else: ?>
