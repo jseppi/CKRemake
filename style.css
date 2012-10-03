@@ -40,6 +40,10 @@ body {
     background: url('img/brillant.png') repeat;
 }
 
+footer {
+  text-align: center;
+}
+
 .wrapper {
     width: 950px;
     margin-left: auto;
@@ -56,8 +60,6 @@ body {
     text-align:center;
     font: 18px/18px 'CreteRoundRegular', serif;
     background-color: rgba(255, 210, 31, 0.2);
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
 #main-nav ul.nav {
@@ -159,4 +161,10 @@ h1.site-title a, h1.site-title a:hover {
 	font: 16px/14px 'CreteRoundRegular', serif;
 	color: gray;
 	margin-top: 0;
+}
+
+.widget-row h3 {
+    padding-bottom: 6px;
+    font: 16px/14px 'CreteRoundRegular', serif;
+    border-bottom: 1px solid #CCC;
 }

@@ -19,9 +19,9 @@ function ck_setup() {
 		array(
 			'name' => 'Primary Sidebar',
 			'id' => 'primary_sidebar',
-			'before_widget' => '<div class="widget">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="widget-title">',
+			'before_widget' => '<div class="row widget-row"><div class="span3">',
+			'after_widget' => '</div></div>',
+			'before_title' => '<h3>',
 			'after_title' => '</h3>'
 		)
 
