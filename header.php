@@ -77,7 +77,21 @@
     
 
         <nav id="main-nav" role="navigation">
-            <?php //TODO: wp_nav_menu(array( 'theme_location' => 'primary')); ?>
+            <?php 
+                $primary_nav_args = array(
+
+                    'theme_location'  => 'primary',
+                    'container'       => '', 
+                    'container_class' => 'main-nav',
+                    'menu_id'         => '', 
+                    'menu_class'      => 'nav nav-pills', 
+                    'echo'            => true,
+                    'fallback_cb'     => '',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    'depth'           => 0
+                );
+            ?>
+            <?php wp_nav_menu( $primary_nav_args ); ?>
         </nav>
 
 
