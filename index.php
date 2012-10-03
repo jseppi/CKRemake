@@ -44,52 +44,25 @@ get_header(); ?>
             </div>
         </div>
         <div class="span4">
+            <?php //TODO: Fill this with a special post type ?> 
             <h3>Heading</h3>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
             <p><a class="btn" href="#">View details »</a></p>
         </div>
     </div> <!-- /top row -->
-    <div class="row">
-        <div class="span9">
-            <div class="row">
-                <section class="span9 article">
-                    <hgroup>
-                        <h3>Heading 1</h3>
-                    </hgroup>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                </section>
-            </div>
-            <div class="row">
-                <section class="span9 article">
-                        <hgroup>
-                            <h3>Heading</h3>
-                        </hgroup>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    
-                </section>
-            </div>
+   
+    <?php query_posts(  array ( 'category_name' => 'news') ); ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php get_template_part('content'); ?>
+    <?php endwhile; else: ?>
+        <p>
+            <?php _e('Sorry, no posts found.'); ?>
+        </p>
+    <?php endif; ?>
+    <p>
+        <?php posts_nav_link(' &#8212; ', __('&laquo; Previous Page'), __('Next Page &raquo;')); ?>
+    </p>   
 
-            <div class="row">
-                <section class="span9 article">
-                        <hgroup>
-                            <h3>Heading</h3>
-                        </hgroup>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    
-                </section>
-            </div>
-
-            <div class="row">
-                <section class="span9 article">
-                    <hgroup>
-                        <h3>Heading</h3>
-                    </hgroup>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                </section>
-
-            </div>
-        </div>
-    </div>
 </div> <!-- /main span9 -->
 
 <?php get_sidebar(); ?>
