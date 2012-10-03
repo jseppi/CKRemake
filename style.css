@@ -144,14 +144,18 @@ body {
 	text-align: center;
 }
 
-#site-title {
-	font: 60px/48px 'BebasNeueRegular', Arial, sans-serif;
-	letter-spacing: 0;
-	margin-bottom: 0;
-	color: #FF2B06;
+h1.site-title {
+  font: 60px/48px 'BebasNeueRegular', Arial, sans-serif;
+  letter-spacing: 0;
+  margin-bottom: 0;
 }
 
-#site-subtitle {
+h1.site-title a, h1.site-title a:hover {
+  text-decoration: none;
+  color: #FF2B06;
+}
+
+.site-subtitle {
 	font: 16px/14px 'CreteRoundRegular', serif;
 	color: gray;
 	margin-top: 0;

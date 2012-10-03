@@ -20,19 +20,19 @@ get_header(); ?>
             <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="active item">
-                        <img src="images/carousel_01.jpg" alt="" />
+                        <img src="<?php bloginfo('template_url'); ?>/images/carousel_01.jpg" alt="" />
                         <div class="carousel-caption">
                             <p>Link to post</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/carousel_03.jpg" alt="" />
+                        <img src="<?php bloginfo('template_url'); ?>/images/carousel_03.jpg" alt="" />
                         <div class="carousel-caption">
                             <p>Link to post</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="images/carousel_02.jpg" alt="" />
+                        <img src="<?php bloginfo('template_url'); ?>/images/carousel_02.jpg" alt="" />
                         <div class="carousel-caption">
                             <p>Link to post</p>
                         </div>

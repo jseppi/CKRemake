@@ -67,12 +67,12 @@
 <body <?php body_class(); ?>>
     <header role="banner">
         <hgroup class="title-unit">
-            <h1 id="site-title">
+            <h1 class="site-title">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                    Coseppi <img src="img/carrot_green.png" alt="" width='42' height='42'/> Kitchen
+                    Coseppi <img src="<?php bloginfo('template_url'); ?>/img/carrot_green.png" alt="" width='42' height='42'/> Kitchen
                 </a>
             </h1>
-            <h2 id="site-subtitle"><?php bloginfo( 'description' ); ?></h2>
+            <h2 class="site-subtitle"><?php bloginfo( 'description' ); ?></h2>
         </hgroup>
     
 
