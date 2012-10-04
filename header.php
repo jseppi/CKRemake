@@ -65,6 +65,9 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+    <div id="fb-root"></div>
+    <script src="http://connect.facebook.net/en_US/all.js#appId=224313110927811&amp;xfbml=1"></script>
+    
     <header role="banner">
         <hgroup class="title-unit">
             <h1 class="site-title">

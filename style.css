@@ -168,8 +168,9 @@ h1.site-title a, h1.site-title a:hover {
 }
 
 .badge a, .badge a:hover {
-  color: white;
+  color: white !important;
   text-decoration: none;
+  background: none !important;
 }
 
 .badge-gf {
@@ -213,6 +214,7 @@ h2.news-heading {
   display: inline-block;
   float: left;
   font: 20px/20px 'CreteRoundRegular', serif;
+  padding-right: 10px;
 }
 
 .post h1 a.post-title {
@@ -226,9 +228,9 @@ h2.news-heading {
 
 .post .badges {
   float: left;
-  padding-left: 10px;
-  padding-top: 13px;
+  padding-right: 10px;
 }
+
 
 .post h3 {
   font: 16px/16px 'CreteRoundRegular', serif;

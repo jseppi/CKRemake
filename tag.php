@@ -10,11 +10,14 @@ get_header(); ?>
    
     <div class="row">
         <div class="span9">
-           <h1 class="tag-title">Posts Tagged "<?php single_cat_title(); ?>"</h1>			
-           <?php echo category_description(); ?>
+            <h1 class="tag-title">Posts Tagged "<?php single_cat_title(); ?>"</h1>			
+            <?php echo category_description(); ?>
+            <hr>
         </div>
-        <hr/>
+        
     </div>
+
+    
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php get_template_part('content'); ?>

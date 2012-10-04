@@ -14,7 +14,9 @@
                         <span class="badge badge-gf"><a href="<?php echo get_term_link('gluten-free', 'post_tag'); ?>" title="Gluten-Free">GF</a></span>
                     <?php } ?>
                 </div>
-                
+                <div class="fcbk_like">
+                  <fb:like href="<?php the_permalink() ?>" send="false" layout="button_count" width="450" show_faces="false" font=""></fb:like>
+                </div>
             </hgroup>
             <?php if ( 'post' == get_post_type() ) : ?>
                 <div class="entry-meta clear">

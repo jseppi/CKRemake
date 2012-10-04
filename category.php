@@ -10,8 +10,9 @@ get_header(); ?>
    
     <div class="row">
         <div class="span9">
-           <h1 class="category-title"><?php single_cat_title(); ?></h1>			
-           <?php echo category_description(); ?>
+            <h1 class="category-title"><?php single_cat_title(); ?></h1>			
+            <?php echo category_description(); ?>
+            <hr>
         </div>
         <hr/>
     </div>
