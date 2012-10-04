@@ -10,7 +10,7 @@ get_header(); ?>
    
     <div class="row">
         <div class="span9">
-           <h1 class="tag-title"><?php single_cat_title(); ?> Recipes</h1>			
+           <h1 class="tag-title">Posts Tagged "<?php single_cat_title(); ?>"</h1>			
            <?php echo category_description(); ?>
         </div>
         <hr/>

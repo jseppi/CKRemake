@@ -16,32 +16,7 @@ get_header(); ?>
 <div class="span9"> <!-- main span9 -->
     <div class="row"> <!-- top row -->
         <div class="span5">
-            <div id="featuredCarousel" class="carousel slide" data-interval="500">
-            <!-- Carousel items -->
-                <div class="carousel-inner">
-                    <div class="active item">
-                        <img src="<?php bloginfo('template_url'); ?>/images/carousel_01.jpg" alt="" />
-                        <div class="carousel-caption">
-                            <p>Link to post</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="<?php bloginfo('template_url'); ?>/images/carousel_03.jpg" alt="" />
-                        <div class="carousel-caption">
-                            <p>Link to post</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="<?php bloginfo('template_url'); ?>/images/carousel_02.jpg" alt="" />
-                        <div class="carousel-caption">
-                            <p>Link to post</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Carousel nav -->
-                <a class="carousel-control left" href="#featuredCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="carousel-control right" href="#featuredCarousel" data-slide="next">&rsaquo;</a>
-            </div>
+            <?php echo make_carousel('featured','featuredCarousel'); ?>
         </div>
         
         <?php query_posts( array ( 'category_name' => 'front-page-blurb', 'posts_per_page' => 1 ) ); ?>
