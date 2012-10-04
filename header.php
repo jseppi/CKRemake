@@ -47,7 +47,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/img/carrot_green.png">
 
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>

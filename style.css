@@ -167,12 +167,6 @@ h1.site-title a, h1.site-title a:hover {
   margin-top: 0;
 }
 
-.widget-row h3 {
-  padding-bottom: 6px;
-  font: 16px/14px 'CreteRoundRegular', serif;
-  border-bottom: 1px solid #CCC;
-}
-
 .badge a, .badge a:hover {
   color: white;
   text-decoration: none;
@@ -201,9 +195,17 @@ h1.site-title a, h1.site-title a:hover {
   text-decoration: none;
 }
 
-h1.category-title, h1.tag-title {
+h1.category-title, h1.tag-title, h2.news-heading {
   font: 34px/34px 'BebasNeueRegular', Arial, sans-serif;
   color: #FF2B06;
+}
+
+h2.news-heading {
+  margin-bottom: 0;
+}
+
+.front-sticky {
+  height: 250px;
 }
 
 .post h1 {
@@ -233,20 +235,57 @@ h1.category-title, h1.tag-title {
   float:right;
   margin-left:10px;
 }
+
 .post .alignleft {
   float:left;
   margin-right:10px;
 }
+
 .post .aligncenter {
   margin:0 auto;
   display:block;
 }
+
 .post .wp-caption {
   background: #F7F7F7;
   border: 1px solid #CCC;
   text-align: center;
   padding: 5px 0 0;
 }
+
 .post .wp-caption p {
   margin: 0;
+}
+
+#sidebar {
+  font-size: 12px;
+}
+
+#sidebar .widget-row h3 {
+  padding-bottom: 6px;
+  font: 16px/14px 'CreteRoundRegular', serif;
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 4px;
+}
+
+#sidebar .widget-row ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+#sidebar .widget-row li {
+  border-bottom: 1px dotted #CCC;
+}
+
+#sidebar .widget-row li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding-left:5px;
+}
+
+#sidebar .widget-row li a:hover {
+  text-decoration: none;
+  color:#E12000;
+  background-color: #F7F7F7;
 }

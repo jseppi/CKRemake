@@ -12,7 +12,26 @@
 get_header(); ?>
 
 <div class="span9"> <!-- main span9 -->
+    <div class="row"> <!-- top row -->
+        
+        <?php query_posts( array ( 'category_name' => 'front-page-blurb', 'posts_per_page' => 1 ) ); ?>
+        <div class="span4">
+            <div class="entry-body">
+                <article class="front-sticky">
+                    <?php while ( have_posts() ) : the_post(); ?>    
+                        <?php the_content(); ?>
+                    <?php endwhile; ?>
+                </article>
+            </div>
+            <h2 class="news-heading">Latest News</h2>
+        </div>
+        <div class="span5">
+            <?php echo make_carousel('featured','featuredCarousel'); ?>
+        </div>
+    </div> <!-- /top row -->
+   
 
+    <?php query_posts(  array ( 'category_name' => 'news', 'posts_per_page' => 3) ); ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php get_template_part('content'); ?>
     <?php endwhile; else: ?>
@@ -27,5 +46,6 @@ get_header(); ?>
 </div> <!-- /main span9 -->
 
 <?php get_sidebar(); ?>
+
 
 <?php get_footer(); ?>
