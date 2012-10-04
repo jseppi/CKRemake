@@ -40,6 +40,10 @@ body {
   background: url('img/brillant.png') repeat;
 }
 
+.clear {
+  clear:both;
+}
+
 footer {
   text-align: center;
 }
@@ -190,12 +194,20 @@ h1.category-title {
 
 .post h1 {
   margin: 0;
+  display: inline-block;
+  float: left;
 }
 
 .post h1 a.post-title, .post h3 a.post-title:hover {
   text-decoration: none;
   color: black;
   font: 20px/20px 'CreteRoundRegular', serif;
+}
+
+.post .badges {
+  float: left;
+  padding-left: 10px;
+  padding-top: 13px;
 }
 
 .post h3 {

@@ -4,15 +4,18 @@
             <hgroup>
                 <h1>
                     <a href="<?php the_permalink() ?>" class="post-title" rel="bookmark"><?php the_title(); ?></a>
+                </h1>
+                <div class="badges">
                     <?php if (has_tag('vegan')) { ?>
                         <span class="badge badge-vegan"><a href="#" title="Vegan">V</a></span>
                     <?php } if (has_tag('gluten-free')) { ?>
                         <span class="badge badge-gf"><a href="#" title="Gluten-Free">GF</a></span>
                     <?php } ?>
-                </h1>
+                </div>
+                
             </hgroup>
             <?php if ( 'post' == get_post_type() ) : ?>
-                <div class="entry-meta">
+                <div class="entry-meta clear">
                     <small>
                         <span class="sep">Posted on </span>
                         <time class="entry-date" datetime="<?php echo get_the_date(); ?>" pubdate><?php echo get_the_date(); ?></time>
