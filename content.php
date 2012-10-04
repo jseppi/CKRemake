@@ -1,3 +1,5 @@
+
+
 <div class="row">
     <article class="span9 post <?php get_post_class(); ?>" id="post-<?php the_ID(); ?>" >
         <header>
@@ -7,9 +9,9 @@
                 </h1>
                 <div class="badges">
                     <?php if (has_tag('vegan')) { ?>
-                        <span class="badge badge-vegan"><a href="#" title="Vegan">V</a></span>
+                        <span class="badge badge-vegan"><a href="<?php echo get_term_link('vegan', 'post_tag'); ?>" title="Vegan">V</a></span>
                     <?php } if (has_tag('gluten-free')) { ?>
-                        <span class="badge badge-gf"><a href="#" title="Gluten-Free">GF</a></span>
+                        <span class="badge badge-gf"><a href="<?php echo get_term_link('gluten-free', 'post_tag'); ?>" title="Gluten-Free">GF</a></span>
                     <?php } ?>
                 </div>
                 
@@ -21,10 +23,11 @@
                         <time class="entry-date" datetime="<?php echo get_the_date(); ?>" pubdate><?php echo get_the_date(); ?></time>
                         
                         <span class="by-author">
-                            <span class="sep"> by </span> <?php the_author_posts_link(); ?> | <span class="meta"><?php edit_post_link(__('Edit')); ?></span>	
+                            <span class="sep"> by </span> <?php the_author_posts_link(); ?> <span class="meta"><?php edit_post_link(__('(Edit)')); ?></span>
                         </span>
-                        Category: <?php the_category(', ') ?>
+                        | Category: <?php the_category(', ') ?>
                         <?php the_tags('| Tags: ', ', ', ''); ?>
+
                     </small>
                 </div><!-- .entry-meta -->
             <?php endif; ?>
@@ -42,6 +45,7 @@
             <?php endif; ?>
         
         </div>
-        
+    <hr/>
     </article>
+
 </div>
