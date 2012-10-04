@@ -186,6 +186,20 @@ h1.site-title a, h1.site-title a:hover {
   background-color: #468847;
 }
 
+.carousel-caption h4 {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.carousel-caption h4 a {
+  color:white;
+}
+
+.carousel-caption h4 a:hover {
+  color: #FF2B06;
+  text-decoration: none;
+}
 
 h1.category-title, h1.tag-title {
   font: 34px/34px 'BebasNeueRegular', Arial, sans-serif;

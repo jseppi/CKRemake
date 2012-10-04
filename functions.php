@@ -53,7 +53,9 @@ function make_carousel($tag, $carouselId) {
             );
           
             if (!empty($children)){
-                $attachments[] = array_shift($children);
+            	$child = array_shift($children);
+            	$child->parent_link = get_permalink( $post->ID );
+                $attachments[] = $child;
                 
                 if (count($attachments) == 5 ) {                
                     break;
@@ -73,6 +75,8 @@ function make_carousel($tag, $carouselId) {
               $img_title = $image->post_title;
               $img_caption = $image->post_excerpt;
               $img_desc = $image->post_content;
+              $parent_link = $image->parent_link;
+              $parent_cat = $image->parent_cat;
               $imagelocs[] = array( 
                   "full" => $attachmenturl, 
                   "thumb" => $attachmentthumbsrc[0], 
@@ -92,7 +96,7 @@ function make_carousel($tag, $carouselId) {
               
               $build .= "<img src='{$attachmenturl}' alt='{$img_title}' height='300' width='400' />";
               $build .= "<div class='carousel-caption'>";
-              $build .= "<h4>{$img_title}</h4>";
+              $build .= "<h4>Featured: <a href='{$parent_link}'>{$img_title}</a></h4>";
               //$build .= "<p>{$img_caption}</p>"; #or should use desc instead?
               $build .= "</div>"; #end carousel-caption
         
