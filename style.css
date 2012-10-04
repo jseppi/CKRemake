@@ -212,12 +212,16 @@ h2.news-heading {
   margin: 0;
   display: inline-block;
   float: left;
+  font: 20px/20px 'CreteRoundRegular', serif;
 }
 
-.post h1 a.post-title, .post h3 a.post-title:hover {
+.post h1 a.post-title {
+  color:black;
+}
+
+.post h1 a.post-title:hover {
+  color: #E12000;
   text-decoration: none;
-  color: black;
-  font: 20px/20px 'CreteRoundRegular', serif;
 }
 
 .post .badges {
@@ -255,6 +259,24 @@ h2.news-heading {
 
 .post .wp-caption p {
   margin: 0;
+  font-size:12px;
+  line-height:12px;
+  padding: 4px 0;
+}
+
+.post a {
+  text-decoration: none;
+  color: #007F46;
+}
+
+.post a:hover {
+  background-color: #f7f7f7;
+  color: #E12000;
+}
+
+.entry-meta {
+  border-bottom: 1px dotted #F7F7F7;
+  margin-bottom: 6px;
 }
 
 #sidebar {
@@ -286,6 +308,6 @@ h2.news-heading {
 
 #sidebar .widget-row li a:hover {
   text-decoration: none;
-  color:#E12000;
+  color: #E12000;
   background-color: #F7F7F7;
 }
