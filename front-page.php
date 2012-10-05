@@ -20,7 +20,7 @@ get_header(); ?>
                 <article class="front-sticky">
                     <?php 
                         foreach ($blurbs as $blurb) {   
-                            echo $blurb->post_content;
+                            echo apply_filters('the_content', $post->post_content);
                         } 
                     ?>
                 </article>
