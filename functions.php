@@ -32,13 +32,14 @@ function ck_setup() {
 endif;
 
 
-if (!function_exists('make_featured_carousel')):
+if (!function_exists('make_carousel')):
 
 function make_carousel($tag, $carouselId) {
-           
-    $featured_posts = get_posts('tag='.$tag); 
 
+    $featured_posts = get_posts('tag={$tag}'); 
+	
     if ( !empty($featured_posts)) {
+	
         foreach ($featured_posts as $post) {
 
             $children = get_children( 
