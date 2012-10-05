@@ -14,13 +14,15 @@ get_header(); ?>
 <div class="span9"> <!-- main span9 -->
     <div class="row"> <!-- top row -->
         
-        <?php query_posts( array ( 'category_name' => 'front-page-blurb', 'posts_per_page' => 1 ) ); ?>
+        <?php $blurbs = get_posts( array ( 'category_name' => 'front-page-blurb', 'posts_per_page' => 1 ) ); ?>
         <div class="span4">
             <div class="entry-body">
                 <article class="front-sticky">
-                    <?php while ( have_posts() ) : the_post(); ?>    
-                        <?php the_content(); ?>
-                    <?php endwhile; ?>
+                    <?php 
+                        foreach ($blurbs as $blurb) {   
+                            echo $blurb->post_content;
+                        } 
+                    ?>
                 </article>
             </div>
             <h2 class="news-heading">Latest News</h2>

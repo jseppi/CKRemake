@@ -32,11 +32,9 @@ function ck_setup() {
 endif;
 
 
-if (!function_exists('make_carousel')):
-
 function make_carousel($tag, $carouselId) {
 
-    $featured_posts = get_posts('tag={$tag}'); 
+    $featured_posts = get_posts(array('tag'=>'featured'));
 	
     if ( !empty($featured_posts)) {
 	
@@ -52,8 +50,8 @@ function make_carousel($tag, $carouselId) {
                       'post_mime_type' => 'image' 
                 )
             );
-          
-            if (!empty($children)){
+
+            if (!empty($children)) {
             	$child = array_shift($children);
             	$child->parent_link = get_permalink( $post->ID );
                 $attachments[] = $child;
@@ -72,21 +70,10 @@ function make_carousel($tag, $carouselId) {
           	$first = true;
           	foreach ( $attachments as $image ) { 
               $attachmenturl = wp_get_attachment_url($image->ID); 
-              $attachmentthumbsrc = wp_get_attachment_image_src( $image->ID, "medium" ); 
               $img_title = $image->post_title;
               $img_caption = $image->post_excerpt;
-              $img_desc = $image->post_content;
               $parent_link = $image->parent_link;
-              $parent_cat = $image->parent_cat;
-              $imagelocs[] = array( 
-                  "full" => $attachmenturl, 
-                  "thumb" => $attachmentthumbsrc[0], 
-                  "title" => $img_title, 
-                  "caption" => $img_caption,
-                  "desc" => $img_desc,
-                  "width" => $attachmentthumbsrc[1], 
-                  "height" => $attachmentthumbsrc[2]
-              ); 
+             
            		if ($first) {
                 $build .= "<div class='item active'>";
                 $first = false; 
@@ -98,9 +85,7 @@ function make_carousel($tag, $carouselId) {
               $build .= "<img src='{$attachmenturl}' alt='{$img_title}' height='300' width='400' />";
               $build .= "<div class='carousel-caption'>";
               $build .= "<h4>Featured: <a href='{$parent_link}'>{$img_title}</a></h4>";
-              //$build .= "<p>{$img_caption}</p>"; #or should use desc instead?
               $build .= "</div>"; #end carousel-caption
-        
               $build .= "</div>"; #end item
             
             }
@@ -110,12 +95,10 @@ function make_carousel($tag, $carouselId) {
             $build .= "<a class='carousel-control right' href='#".$carouselId."' data-slide='next'>&rsaquo;</a>";
             $build .= "</div>"; //end featuredCarousel
           	return $build;
-
         }
 
-        return "";
-
+        return ""; //if we got here, no featured posts with attached images were found :(
     }
 }
-endif;
+
 ?>
