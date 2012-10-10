@@ -253,10 +253,7 @@ h2.news-heading {
 }
 
 .post .wp-caption {
-  background: #F7F7F7;
-  border: 1px solid #CCC;
   text-align: center;
-  padding: 5px 0 0;
 }
 
 .post .wp-caption p {
@@ -279,6 +276,23 @@ h2.news-heading {
 .entry-meta {
   border-bottom: 1px dotted #F7F7F7;
   margin-bottom: 6px;
+}
+
+.entry-content img {
+  background: #fff;
+  border-style: solid;
+  border-color: #DDD;
+  padding: 0.333em;
+  border-width: 0.083em;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.entry-content img:hover {
+  -webkit-box-shadow: 0px 0px 5px #313131;
+  -moz-box-shadow: 0px 0px 5px #313131;
+  box-shadow: 0px 0px 5px #313131;
 }
 
 #sidebar {
@@ -312,4 +326,8 @@ h2.news-heading {
   text-decoration: none;
   color: #E12000;
   background-color: #F7F7F7;
+}
+
+.search-query {
+  width: 220px;
 }

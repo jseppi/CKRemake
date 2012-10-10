@@ -11,7 +11,7 @@
 
 get_header(); ?>
 
-<div class="span9"> <!-- main span9 -->
+<div class="span8"> <!-- main span8 -->
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php get_template_part('content'); ?>
@@ -24,7 +24,7 @@ get_header(); ?>
         <?php posts_nav_link(' &#8212; ', __('&laquo; Previous Page'), __('Next Page &raquo;')); ?>
     </p>   
 
-</div> <!-- /main span9 -->
+</div> <!-- /main span8 -->
 
 <?php get_sidebar(); ?>
 

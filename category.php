@@ -6,10 +6,10 @@
 
 get_header(); ?>
 
-<div class="span9"> <!-- main span9 -->
+<div class="span8"> <!-- main span8 -->
    
     <div class="row">
-        <div class="span9">
+        <div class="span8">
             <h1 class="category-title"><?php single_cat_title(); ?></h1>			
             <?php echo category_description(); ?>
             <hr>
@@ -28,7 +28,7 @@ get_header(); ?>
         <?php posts_nav_link(' &#8212; ', __('&laquo; Previous Page'), __('Next Page &raquo;')); ?>
     </p>   
 
-</div> <!-- /main span9 -->
+</div> <!-- /main span8 -->
 
 <?php get_sidebar(); ?>
 

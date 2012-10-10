@@ -1,7 +1,7 @@
 
 
 <div class="row">
-    <article class="span9 post <?php get_post_class(); ?>" id="post-<?php the_ID(); ?>" >
+    <article class="span8 post <?php get_post_class(); ?>" id="post-<?php the_ID(); ?>" >
         <header>
             <hgroup>
                 <h1>
@@ -50,4 +50,5 @@
     <hr/>
     </article>
 
+    <?php comments_template( '', true ); ?>
 </div>
