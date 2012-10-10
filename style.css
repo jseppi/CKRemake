@@ -192,8 +192,7 @@ h1.site-title a, h1.site-title a:hover {
 }
 
 .carousel-caption h4 a:hover {
-  color: #FF2B06;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 h1.category-title, h1.tag-title, h2.news-heading {
