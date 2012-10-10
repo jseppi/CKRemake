@@ -16,14 +16,10 @@ get_header(); ?>
         
         <?php $blurbs = get_posts( array ( 'category_name' => 'front-page-blurb', 'posts_per_page' => 1 ) ); ?>
         <div class="span4">
-            <div class="entry-body">
-                <article class="front-sticky">
-                    <?php 
-                        foreach ($blurbs as $blurb) {   
-                            echo apply_filters('the_content', $post->post_content);
-                        } 
-                    ?>
-                </article>
+            <div class="front-sticky">
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('blurb') ) : ?>
+
+                <?php endif; ?>
             </div>
             <h2 class="news-heading">Latest News</h2>
         </div>

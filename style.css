@@ -261,6 +261,7 @@ h2.news-heading {
   font-size:12px;
   line-height:12px;
   padding: 4px 0;
+  color: gray;
 }
 
 .post a {

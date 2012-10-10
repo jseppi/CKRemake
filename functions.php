@@ -27,6 +27,16 @@ function ck_setup() {
 
 	);
 
+
+  register_sidebar(array(
+      'name' => 'Blurb',
+      'id' => 'blurb-widgets',
+      'before_widget' => '<div class="blurb-widget">',
+      'after_widget' => '</div>',
+      'before_title' => '',
+      'after_title' => '')
+  );
+
 }
 
 endif;
