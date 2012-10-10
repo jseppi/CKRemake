@@ -94,7 +94,7 @@ function make_carousel($tag, $carouselId) {
               
               $build .= "<img src='{$attachmenturl}' alt='{$img_title}' height='300' width='400' />";
               $build .= "<div class='carousel-caption'>";
-              $build .= "<h4>Featured: <a href='{$parent_link}'>{$img_title}</a></h4>";
+              $build .= "<h4><a href='{$parent_link}'>{$img_title}</a></h4>";
               $build .= "</div>"; #end carousel-caption
               $build .= "</div>"; #end item
             
