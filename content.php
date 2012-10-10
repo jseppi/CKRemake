@@ -50,5 +50,7 @@
     <hr/>
     </article>
 
-    <?php comments_template( '', true ); ?>
+    <div class="span8">
+        <?php comments_template( '', true ); ?>
+    </div>
 </div>

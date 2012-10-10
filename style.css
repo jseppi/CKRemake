@@ -208,6 +208,11 @@ h2.news-heading {
   height: 250px;
 }
 
+.front-sticky h4 {
+  font: 28px/28px 'BebasNeueRegular', Arial, sans-serif;
+  color: #FF2B06;
+}
+
 .post h1 {
   margin: 0;
   display: inline-block;

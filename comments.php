@@ -5,7 +5,7 @@
  */
 ?>
 
-<div id="comments" class="span9">
+<div id="comments">
 <?php if ( post_password_required() ) : ?>
 				<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'ckremake' ); ?></p>
 			</div><!-- #comments -->
