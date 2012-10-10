@@ -15,7 +15,7 @@ get_header(); ?>
     <div class="row"> <!-- top row -->
         
         <?php $blurbs = get_posts( array ( 'category_name' => 'front-page-blurb', 'posts_per_page' => 1 ) ); ?>
-        <div class="span4">
+        <div class="span3">
             <div class="front-sticky">
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('blurb') ) : ?>
 
