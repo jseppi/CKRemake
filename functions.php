@@ -1,4 +1,8 @@
 <?php
+
+// Register Custom Navigation Walker
+require_once('bootstrap-nav-walker.php');
+
 /**
  * Tell WordPress to run ck_setup() when the 'after_setup_theme' hook is run.
  */
@@ -65,10 +69,6 @@ function make_carousel($tag, $carouselId) {
             	$child = array_shift($children);
             	$child->parent_link = get_permalink( $post->ID );
                 $attachments[] = $child;
-                
-                if (count($attachments) == 5 ) {                
-                    break;
-                }
             }
         }
        

@@ -65,8 +65,6 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <div id="fb-root"></div>
-    <script src="http://connect.facebook.net/en_US/all.js#appId=224313110927811&amp;xfbml=1"></script>
     
     <header role="banner">
         <hgroup class="title-unit">
@@ -80,42 +78,20 @@
     
 
         <nav id="main-nav" role="navigation">
-            <?php 
-                $primary_nav_args = array(
 
-                    'theme_location'  => 'primary',
-                    'container'       => '', 
-                    'container_class' => 'main-nav',
-                    'menu_id'         => '', 
-                    'menu_class'      => 'nav nav-pills', 
-                    'echo'            => true,
-                    'fallback_cb'     => '',
-                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    'depth'           => 0
+
+            <?php 
+                wp_nav_menu( array(
+                    'menu' => 'primary',
+                    'depth'      => 2,
+                    'container'  => '',
+                    'menu_class'     => 'nav nav-pills',
+                    //Process nav menu using our custom nav walker
+                    'walker' => new twitter_bootstrap_nav_walker())
                 );
             ?>
-            <?php wp_nav_menu( $primary_nav_args ); ?>
         </nav>
 
-
-        <!-- TODO: Make primary nav have this markup
-        <div id="main-nav">
-            <ul class="nav nav-pills">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <li>
-                    <a href="#">Recipes</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">link 1</a></li>
-                        <li><a href="#">link 2</a></li>
-                        <li><a href="#">link 3</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="#">Tips &amp; Techniques</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </div>-->
     </header>
     <div class="container">
         <div class="wrapper curved">

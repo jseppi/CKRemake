@@ -99,6 +99,40 @@ footer {
   border-radius: 0
 }
 
+#main-nav .nav-pills .open .dropdown-toggle, #main-nav .nav > li.dropdown.open.active > a:hover {
+  color: #008047;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#main-nav .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, 
+#main-nav .dropdown-submenu:hover > a {
+  text-decoration: underline;
+  color: #008047;
+  background-color: transparent;
+  background-color: transparent;
+  background-image: none
+}
+
+#main-nav .nav .dropdown-toggle .caret {
+  border-top-color: black;
+  border-bottom-color: black;
+}
+
+
+#main-nav .nav li.dropdown.open .caret,
+#main-nav .nav li.dropdown.open.active .caret, 
+#main-nav .nav li.dropdown.open a:hover .caret {
+  border-top-color: #008047;
+  border-bottom-color: #008047;
+  
+}
+
+#main-nav .dropdown-menu {
+  margin: -2px 0 0;
+  text-align: left;
+}
+
 .wrapper:before,
 .wrapper:after {
   content:"";
@@ -331,6 +365,10 @@ h2.news-heading {
   text-decoration: none;
   color: #E12000;
   background-color: #F7F7F7;
+}
+
+#sidebar .social-icons {
+  text-align: center;
 }
 
 .search-query {
