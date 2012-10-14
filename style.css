@@ -105,6 +105,15 @@ footer {
   border-color: transparent;
 }
 
+#main-nav .dropdown-menu .active > a, 
+#main-nav .dropdown-menu .active > a:hover {
+  color: #008047;
+  text-decoration: underline;
+  outline: 0;
+  background-color: #F7F7F7;
+  background-image: none;
+}
+
 #main-nav .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, 
 #main-nav .dropdown-submenu:hover > a {
   text-decoration: underline;
